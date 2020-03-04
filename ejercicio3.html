@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        img{
+            margin-top: 10px;
+            display: block;
+        }
+
+    </style>
+    <script>
+        $(document).ready(function () {
+        $('img').click(function() {
+            console.log('data-gato-src value is', $(this).attr('data-gato-src'));
+            
+            //el console.log de la linea 21 no es necesario
+            console.log($(this).data('gato-src'));
+            $(this).attr('src', $(this).data('gato-src'));
+            //otra forma:
+            //$(this)attr('src', $(this).data('gato-src'));
+            //var data = $(this).attr('data-gato-src'));
+            //$(this)attr('src', $(this).data(data));
+        });
+    });
+    </script>
+</head>
+<body>
+        <img src='ninja0.png' data-gato-src='cat0.png' />
+        <img src='ninja1.png' data-gato-src='cat1.png' />
+        <img src='ninja2.png' data-gato-src='cat2.png' />
+        <img src='ninja3.png' data-gato-src='cat3.png' />
+        <img src='ninja4.png' data-gato-src='cat4.png' />
+    </div>  
+</body>
+</html>
